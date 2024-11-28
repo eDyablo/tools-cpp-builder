@@ -12,14 +12,14 @@ WORKDIR /var/workspace
 
 ONBUILD WORKDIR /var/workspace
 
-ONBUILD ARG SRC_DIR_PATH=.
+ONBUILD ARG SRC_DIR_PATH
 
 ONBUILD COPY ${SRC_DIR_PATH} .
 
-ONBUILD ARG CMAKE_PROJECT_NAME
+ONBUILD ARG CMAKE_TARGET
 
 ONBUILD RUN \
   mkdir -p build \
   && cd build \
   && cmake .. \
-  && make ${CMAKE_PROJECT_NAME}
+  && make ${CMAKE_TARGET}

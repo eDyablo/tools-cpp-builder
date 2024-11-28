@@ -3,3 +3,7 @@
 .gitignore
 .vscode
 *.gitlab-ci.yml
+docker-compose.yaml
+Dockerfile
+LICENSE
+README.md
