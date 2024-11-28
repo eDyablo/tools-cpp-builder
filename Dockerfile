@@ -19,7 +19,7 @@ ONBUILD COPY ${SRC_DIR_PATH} .
 ONBUILD ARG CMAKE_PROJECT_NAME
 
 ONBUILD RUN \
-  mkdir build \
+  mkdir -p build \
   && cd build \
   && cmake .. \
   && make ${CMAKE_PROJECT_NAME}
