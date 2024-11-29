@@ -42,4 +42,5 @@ ONBUILD RUN \
   mkdir -p build \
   && cd build \
   && cmake .. \
-  && make ${CMAKE_TARGET}
+  && make ${CMAKE_TARGET} \
+  && ctest --no-tests=ignore --verbose .
